@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Seenu • Portfolio</title>
+  <meta name="description" content="Seenu — Front‑End Developer & UI/UX Designer. Portfolio with Home, About, and Contact." />
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><a href="#"><img style="width:100px; height:40px;" src="./Assests/logo.PNG" alt=""></a></div>
+      <nav>
+        <button class="menu-btn" aria-label="Toggle menu" id="menuBtn">☰</button>
+        <div class="links" id="navLinks">
+          <a href="#home" class="active">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Project</a>
+          <a href="#case-studies">case-studies</a>
+          <a href="#highlights">Highlights</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Home -->
+  <section id="home">
+    <div class="container">
+      <div class="card hero">
+        <div>
+          <span class="badge">Web-Developer • UI/UX Designer</span>
+          <h1>Hello, I’m <span style="color:var(--brand)">Seenu</span>.<br/> I build clean, fast, user‑friendly web apps.</h1>
+          <p>Transforming visions into stunning digital experiences, I focus on accessible, responsive interfaces using Angular, HTML, CSS, and JavaScript. I enjoy turning complex problems into elegant, usable designs.</p>
+          <div class="cta">
+            <a class="btn primary" href="#contact">Contact Me</a>
+            <a class="btn secondary" href="#about">Learn More</a>
+            <a class="btn secondary" href="#" download title="">Download Resume</a>
+          </div>
+        </div>
+       <div class="card" style="align-self:stretch; display:grid; place-items:center;">
+       
+        <img src="./Assests/coding-freak.gif" alt="" width="400" height="300">
+          <p class="note" style="margin:0">Clean code • UX first • Performance</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class=" about-grid">
+        <div>
+          <h2>About Me</h2>
+          <p>I’m a Front-End Developer skilled in Angular, React, JavaScript, HTML5, CSS3, Bootstrap, TailwindCSS, and Figma, focused on building responsive and user-friendly web apps. With hands-on experience in Node.js, Express.js, and MongoDB, I also contribute to full-stack projects. I believe every design and line of code is part of a story, and I’m passionate about blending functionality with creativity to craft seamless digital experiences. <br>For me, the goal isn’t just to build apps, but to create experiences that people remember and enjoy. </p>
+       
+          <div class="tags" aria-label="Skills">
+            <span class="badge">Angular</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">HTML</span>
+            <span class="badge">CSS</span>
+            <span class="badge">Figma</span>
+            <span class="badge">Web development</span>
+            <span class="badge">UIUX</span>
+          </div>
+          <div class="kpis">
+            <div class="kpi"><h3>15+</h3><p>Projects</p></div>
+            <div class="kpi"><h3>1.5yr+</h3><p>Experience</p></div>
+            <div class="kpi"><h3>100%</h3><p>Responsive</p></div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+           <h3>Professional Experience <span class="badge">Academic Project Developer</span> </h3>
+           <ul>
+            <li>Developed and delivered 15+ web projects using Angular, React, JavaScript, HTML5, CSS3, Bootstrap, TailwindCSS, and Figma.</li>
+            <li>esigned and implemented responsive, user-friendly interfaces while mentoring teams on Git, API integration, and real-world practices.</li>
+            <li>Built full-stack project modules with Node.js, Express.js, and MongoDB for end-to-end demonstrations.</li>
+            <li>Collaborated with academic and client stakeholders to align project outcomes with real-world requirements.</li>
+            <li>Created detailed documentation and reusable components to improve development efficiency and knowledge sharing.</li>
+          </ul>
+         </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process-timeline" id="process">
+  <div class="pt-container">
+    <header class="pt-header">
+      <h2>My Process & What I Believe</h2>
+      <p>Balanced focus on <strong>UI/UX</strong> and <strong>Development</strong>—from insights to shipping.</p>
+    </header>
+
+    <!-- LANE: UI/UX -->
+    <div class="pt-lane" data-lane="ux" aria-label="UI/UX Process">
+      <div class="pt-lane-head">
+        <span class="pt-dot" aria-hidden="true"></span>
+        <h3>UI/UX</h3>
+      </div>
+
+      <div class="pt-rail" aria-hidden="true"></div>
+
+      <div class="pt-steps">
+        <!-- Discover -->
+        <article class="pt-step">
+          <div class="pt-marker" data-step="1" aria-hidden="true"></div>
+          <h4>Discover</h4>
+          <p class="pt-belief">Good design starts with understanding people.</p>
+          <ul>
+            <li>User interviews & surveys</li>
+            <li>Heuristic & competitor review</li>
+            <li>Contextual inquiry</li>
+          </ul>
+        </article>
+
+        <!-- Define -->
+        <article class="pt-step">
+          <div class="pt-marker" data-step="2" aria-hidden="true"></div>
+          <h4>Define</h4>
+          <p class="pt-belief">Solve the right problem, not just ship pixels.</p>
+          <ul>
+            <li>Personas & JTBD</li>
+            <li>Journey maps & problem framing</li>
+            <li>Clear success metrics</li>
+          </ul>
+        </article>
+
+        <!-- Design -->
+        <article class="pt-step">
+          <div class="pt-marker" data-step="3" aria-hidden="true"></div>
+          <h4>Design</h4>
+          <p class="pt-belief">Iterate fast, test early, keep it accessible.</p>
+          <ul>
+            <li>Wireframes → hi-fi prototypes</li>
+            <li>Design systems & components</li>
+            <li>Accessibility first</li>
+          </ul>
+        </article>
+
+        <!-- Test -->
+        <article class="pt-step">
+          <div class="pt-marker" data-step="4" aria-hidden="true"></div>
+          <h4>Test</h4>
+          <p class="pt-belief">Evidence over opinion—let users guide us.</p>
+          <ul>
+            <li>Usability studies</li>
+            <li>A/B experiments</li>
+            <li>Iterative refinements</li>
+          </ul>
+        </article>
+
+        <!-- Deliver -->
+        <article class="pt-step">
+          <div class="pt-marker" data-step="5" aria-hidden="true"></div>
+          <h4>Deliver</h4>
+          <p class="pt-belief">Launch → learn → improve continuously.</p>
+          <ul>
+            <li>Handoffs with specs</li>
+            <li>Post-launch feedback loops</li>
+            <li>Roadmap next steps</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+
+    <!-- LANE: Development -->
+    <div class="pt-lane" data-lane="dev" aria-label="Development Process">
+      <div class="pt-lane-head">
+        <span class="pt-dot" aria-hidden="true"></span>
+        <h3>Development</h3>
+      </div>
+
+      <div class="pt-rail" aria-hidden="true"></div>
+
+      <div class="pt-steps">
+        <!-- Plan -->
+        <article class="pt-step">
+          <div class="pt-marker" data-step="1" aria-hidden="true"></div>
+          <h4>Plan</h4>
+          <p class="pt-belief">Build the smallest thing that proves value.</p>
+          <ul>
+            <li>Breakdown epics → stories</li>
+            <li>Define acceptance criteria</li>
+            <li>Pick tech & architecture</li>
+          </ul>
+        </article>
+
+        <!-- Setup -->
+        <article class="pt-step">
+          <div class="pt-marker" data-step="2" aria-hidden="true"></div>
+          <h4>Setup</h4>
+          <p class="pt-belief">Strong foundations make shipping faster.</p>
+          <ul>
+            <li>Design tokens & theming</li>
+            <li>Component library</li>
+            <li>CI/CD & quality gates</li>
+          </ul>
+        </article>
+
+        <!-- Build -->
+        <article class="pt-step">
+          <div class="pt-marker" data-step="3" aria-hidden="true"></div>
+          <h4>Build</h4>
+          <p class="pt-belief">Code mirrors design: clean, modular, tested.</p>
+          <ul>
+            <li>Responsive, accessible UI</li>
+            <li>API integration</li>
+            <li>Unit & E2E tests</li>
+          </ul>
+        </article>
+
+        <!-- Validate -->
+        <article class="pt-step">
+          <div class="pt-marker" data-step="4" aria-hidden="true"></div>
+          <h4>Validate</h4>
+          <p class="pt-belief">Measure what matters, then optimize.</p>
+          <ul>
+            <li>Perf & security checks</li>
+            <li>Telemetry & analytics</li>
+            <li>Bug triage</li>
+          </ul>
+        </article>
+
+        <!-- Ship -->
+        <article class="pt-step">
+          <div class="pt-marker" data-step="5" aria-hidden="true"></div>
+          <h4>Ship</h4>
+          <p class="pt-belief">Reliable releases + feedback cycles.</p>
+          <ul>
+            <li>Rollouts & feature flags</li>
+            <li>Docs & handover</li>
+            <li>Continuous improvement</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Projects  code -->
+ <section  id="projects">
+  <div class="container">
+    <div class="card">
+      <h2>Projects <span class="badge">Code</span></h2>
+      <p class="note">Some of my recent works.</p>
+      <div class="projects-grid">
+        
+        <div class="project">
+          <img src="./Assests/project-2.png" alt="Currency Converter screenshot" />
+          <h3>Currency Converter</h3>
+          <p>A simple and interactive Currency Converter Web App built using HTML, CSS, and JavaScript. This app allows users to quickly convert between different currencies using live exchange rates.</p>
+          <a class="btn secondary" href="https://github.com/yespseenu/code-sandbox/tree/main/Currency%20Converter" target="_blank">View Project</a>
+        </div>
+
+        <div class="project">
+          <img src="./Assests/project-1.png" alt="3D Product Carousel screenshot" />
+          <h3>3D Product Carousel</h3>
+          <p>A 3D rotating carousel built with HTML, CSS, and JavaScript. It allows users to navigate between products, view details, and check out items with smooth animations.</p>
+          <a class="btn secondary" href="https://github.com/yespseenu/code-sandbox/tree/main/ShoeWebsite" target="_blank">View Project</a>
+        </div>
+
+        <div class="project">
+          <img src="./Assests/project-3.png" alt="Recipe Finder App screenshot" />
+          <h3>Recipe Finder App</h3>
+          <p>A simple and elegant web application to search and explore recipes from around the world. Built with HTML, CSS, and JavaScript, and powered by the TheMealDB API.</p>
+          <a class="btn secondary" href="https://github.com/yespseenu/code-sandbox/tree/main/RecipeFinder" target="_blank">View Project</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Projects  uiux -->
+<section id="projects">
+  <div class="container">
+    <div class="card">
+      <h2>Projects <span class="badge">UIUX</span></h2>
+      <p class="note">Some of my recent works.</p>
+      <div class="projects-grid">
+        
+        <div class="project">
+          <img src="./Assests/webapp-food.png" alt="Portfolio Website screenshot" />
+          <h3>Restaurant Booking App (Webpage)</h3>
+          <p>Built with a modern UI using a white and green color scheme, the app ensures simplicity, freshness, and trust</p>
+          <a class="btn secondary" href="https://www.figma.com/proto/mEoxZYrHKQYHdv9h5FaXO0/sign-in?node-id=675-5803&t=yu5TRXjvxoiFeRmy-1" target="_blank">View Project</a>
+        </div>
+
+        <div class="project">
+          <img src="./Assests//foodapp-mob.jpeg" alt="Recipe Finder App screenshot" />
+          <h3> Restaurant Booking App (Mobile)</h3>
+          <p>This project focuses on improving the dining experience by allowing users to book tables</p>
+          <a class="btn secondary" href="https://www.figma.com/proto/w6KdbtsBG9aZoINrCA1diB/Project?node-id=266-998&t=3uBW8eTBWffUzTYj-0&scaling=min-zoom&content-scaling=fixed&page-id=73%3A30" target="_blank">View Project</a>
+        </div>
+
+        <div class="project">
+          <img src="./Assests/gameapp.png" alt="UI Design System screenshot" />
+          <h3>UI Design Gameapp</h3>
+          <p>Designed a game interface in Figma as a personal creative project.Explored interactive layouts and visual design while experimenting for fun.</p>
+          <a class="btn secondary" href="https://www.figma.com/proto/4DgP8Pi7EQR8nycnnY7jKu/gaming_website-my?node-id=1-2&t=2jy2eY73YfJ2oDYp-0&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1" target="_blank">View Project</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- case-studies -->
+<section id="case-studies">
+  <div class="container">
+    <h2>Research</h2>
+    <div class="case-grid">
+      <article class="case-card">
+        <img src="./Assests/scam-pic.jpg" alt="Scam Refine Research">
+        <h3>Scam Refine Research </h3>
+        <p>Conducting research on digital scams to understand patterns and user vulnerabilities.Exploring digital solutions to prevent fraud and enhance online safety.Aiming to create practical, user-centered tools for safer online experiences.</p>
+        <a href="https://www.figma.com/board/UW1XAynlrdEgnBjJCLcZyD/Scam-Refine-Reasearch-Architecture?node-id=0-1&p=f&t=DwgO4Zr4aU1V70vs-0" class="btn">View</a>
+      </article>
+
+      <article class="case-card paper">
+        <img src="./Assests/IMG_4322.JPG" alt="my section">
+        <h3>Hey Again! <span class="badge">This is seenu</span></h3>
+        <p>I’m a Front-End Developer passionate about building responsive and user-friendly web apps with modern frameworks. Beyond development, I enjoy exploring creative design work like logos, invitations, and visual concepts. Blending technical skills, creativity, and problem-solving, I aim to craft digital experiences that feel seamless, engaging, and meaningful.</p>
+      </article>
+
+      <article class="case-card">
+        <img src="./Assests/Vehicle Management.jpg" alt="Vehicle Management Application">
+        <h3>Vehicle Management Application</h3>
+        <p> vehicle ownership by providing a centralized platform for managing documents, paying insurance, and accessing smart parking and 
+          maintenance solutions</p>
+        <a href="https://www.figma.com/board/zbHCQV2f6xZN2Em9pzyrLq/Comprehensive-Vehicle-Management--Application?node-id=0-1&t=RVgL4DxYr7u4tQbe-1" class="btn" target="_blank">View</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Highlights -->
+
+<section id="highlights">
+  <div class="container">
+    <div class="card highlights-grid">
+
+      <!-- Intro with hover image (Top Section) -->
+      <div class="highlight-intro">
+        <h2>Highlights</h2>
+        <p class="note">
+          A quick glance at what defines me as a developer and designer.
+        </p>
+      </div>
+
+      <!-- Highlight Cards (Grid Below) -->
+      <div class="highlight-cards">
+
+        <div class="highlight">
+          <div class="highlight-img">
+            <img src="./Assests/UIUX-Icon.png" alt="UI/UX Icon" class="base">
+            <img src="./Assests/gtn.jpg" alt="UI/UX Hover" class="hover">
+          </div>
+          <h3>UI/UX Focused</h3>
+          <p>Designing interfaces that blend creativity with usability, always keeping users first. I also conducted a workshop on UX and design processes for 30+ students at GTN College, Dindigul, educating them on the importance of user experience. It was a super valuable and inspiring experience.</p>
+        </div>
+
+        <div class="highlight">
+          <div class="highlight-img">
+            <img src="./Assests/coding-icon.png" alt="development" class="base">
+            <img src="./Assests/codingImg.jpeg" alt="development" class="hover">
+          </div>
+          <h3>development</h3>
+          <p>Skilled in Angular, HTML5, CSS3, and TailwindCSS for building modern, responsive UIs.Familiar with backend technologies such as Node.js, Express, and MongoDB, enabling smooth collaboration and efficient handover during full-stack development.</p>
+        </div>
+
+        <div class="highlight">
+          <div class="highlight-img">
+            <img src="./Assests/cinma.jpg" alt="creative and cultural initiatives" class="base">
+            <img src="./Assests/Shortflim.jpeg" alt="creative and cultural initiatives" class="hover">
+          </div>
+          <h3>creative and cultural initiatives</h3>
+          <p>In addition to my technical and design work, I’ve been actively involved in creative and cultural initiatives. I was awarded 2nd Prize in the Short Film Competition held at my college, where I took charge of direction, storytelling, and editing. This experience helped me understand visual storytelling and audience engagement on a deeper level.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<section class="design-work">
+  <h2 class="section-title">Creative Freelance Services</h2>
+  <div class="scroll-wrapper">
+    <div class="scroll-container">
+      <div class="work-card">
+        <img src="./Assests/arusuvai-poster.png" alt="Invitation Design">
+        <h3>Poster </h3>
+        <p>Engaging banners for Arusuvai.</p>
+      </div>
+      <div class="work-card">
+        <img src="./Assests/aura-logo.png" alt="Logo Design">
+        <h3>AURA Herbs</h3>
+        <p> traditional remedies and trusted wellness solutions..</p>
+      </div>
+      <div class="work-card">
+        <img src="./Assests/Saker-card.jpg" alt="First page design">
+        <h3>First page design</h3>
+        <p>Saker Kannaiya – A Life of Wisdom and Service</p>
+      </div>
+      <div class="work-card">
+        <img src="./Assests/AR-card.jpg" alt="Wedding Invitation Design ">
+        <h3>Wedding Invitation Design </h3>
+        <p>Abhinesh & Rubhashree</p>
+      </div>
+      <div class="work-card">
+        <img src="./Assests/logo_t.png" alt="Social Media Banner">
+        <h3>Trust organizations</h3>
+        <p>For NGOs, trust organizations, senior care homes</p>
+      </div>
+
+      <!-- Duplicate cards for infinite loop -->
+      <div class="work-card">
+        <img src="./Assests/aura-logo.png" alt="Logo Design">
+        <h3>AURA Herbs</h3>
+        <p> traditional remedies and trusted wellness solutions..</p>
+      </div>
+      <div class="work-card">
+        <img src="./Assests/Saker-card.jpg" alt="First page design">
+        <h3>First page design</h3>
+        <p>Saker Kannaiya – A Life of Wisdom and Service</p>
+      </div>
+      <div class="work-card">
+        <img src="./Assests/AR-card.jpg" alt="Wedding Invitation Design ">
+        <h3>Wedding Invitation Design </h3>
+        <p>Abhinesh & Rubhashree</p>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="card">
+        <h2>Contact</h2>
+        <img src="./Assests/Contact-Us-animation.gif" alt="" width="200px" height="200px">
+        <p class="quote">Thank you for taking the time to visit. Whether you have a question, a project idea, or simply want to connect, I’m always happy to hear from you. Every message is important, and I genuinely value the opportunity to collaborate, assist, or simply share thoughts. Feel free to reach out through the contact form or the details provided below. Let’s start a conversation and see how we can work together to create something meaningful and impactful. </p>
+        
+
+        <div class="contact-buttons">
+          <a href="tel:+919345588457" class="contact-btn">Phone</a>
+          <a href="mailto:seenu.official.mail@gmail.com" class="contact-btn">Mail</a>
+          <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" class="contact-btn">LinkedIn</a>
+        </div>
+       
+      </div>
+    </div>
+  </section>
+<footer>
+
+  <!-- Quote -->
+  <div style="text-align:center; margin-bottom:18px; font-style:italic; color:var(--muted); font-size:0.95rem;">
+    Nandrii! for scrolling! Let’s create something great together."
+
+  </div>
+
+  <!-- Footer Content -->
+  <div class="container" style="display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap">
+    <span>© <span id="year"></span> Seenu. All rights reserved.</span>
+    <div style="display:flex; gap:8px">
+      <a class="btn" href="#home" aria-label="Back to top">↑ Top</a>
+      <a class="btn" href="https://www.linkedin.com/in/seenuyesp/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Auto year
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
