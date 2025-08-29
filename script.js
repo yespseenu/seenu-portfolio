@@ -1,29 +1,34 @@
-// Select all sections
+// === Section Reveal Animation ===
 const sections = document.querySelectorAll("section");
 
-// Create Intersection Observer
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      // Add 'show' class when section enters viewport
       entry.target.classList.add("show");
-      // Optional: stop observing after animation
       observer.unobserve(entry.target);
     }
   });
 }, {
-  threshold: 0.2 // trigger when 20% of section is visible
+  threshold: 0,                  // trigger as soon as section enters viewport
+  rootMargin: "0px 0px -10% 0px" // fire earlier near bottom
 });
 
-// Observe each section
-sections.forEach(section => {
-  observer.observe(section);
-});
+sections.forEach(section => observer.observe(section));
 
-// ===== Optional: Mobile Menu Toggle =====
+// === Mobile Menu Toggle ===
 const menuBtn = document.querySelector(".menu-btn");
 const navLinks = document.querySelector(".nav .links");
 
-menuBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("open");
+if (menuBtn && navLinks) {
+  menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+  });
+}
+
+// === Fallback: ensure last section always shows ===
+window.addEventListener("load", () => {
+  const lastSection = sections[sections.length - 1];
+  if (lastSection) {
+    setTimeout(() => lastSection.classList.add("show"), 200);
+  }
 });
