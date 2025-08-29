@@ -19,7 +19,7 @@
           <a href="#home" class="active">Home</a>
           <a href="#about">About</a>
           <a href="#projects">Project</a>
-          <a href="#case-studies">case-studies</a>
+          <a href="#case-studies">Research</a>
           <a href="#highlights">Highlights</a>
           <a href="#contact">Contact</a>
         </div>
@@ -43,7 +43,7 @@
         </div>
        <div class="card" style="align-self:stretch; display:grid; place-items:center;">
        
-        <img src="./Assests/coding-freak.gif" alt="" width="400" height="300">
+        <img src="./Assests/coding-freak.gif" alt="coding image" id="heroimage">
           <p class="note" style="margin:0">Clean code • UX first • Performance</p>
         </div>
       </div>
@@ -96,147 +96,95 @@
       <p>Balanced focus on <strong>UI/UX</strong> and <strong>Development</strong>—from insights to shipping.</p>
     </header>
 
-    <!-- LANE: UI/UX -->
-    <div class="pt-lane" data-lane="ux" aria-label="UI/UX Process">
-      <div class="pt-lane-head">
-        <span class="pt-dot" aria-hidden="true"></span>
+    <div class="timeline-grid">
+      <!-- UI/UX Lane -->
+      <div class="timeline-lane">
         <h3>UI/UX</h3>
-      </div>
-
-      <div class="pt-rail" aria-hidden="true"></div>
-
-      <div class="pt-steps">
-        <!-- Discover -->
-        <article class="pt-step">
-          <div class="pt-marker" data-step="1" aria-hidden="true"></div>
+        <div class="timeline-step">
           <h4>Discover</h4>
-          <p class="pt-belief">Good design starts with understanding people.</p>
           <ul>
             <li>User interviews & surveys</li>
             <li>Heuristic & competitor review</li>
             <li>Contextual inquiry</li>
           </ul>
-        </article>
-
-        <!-- Define -->
-        <article class="pt-step">
-          <div class="pt-marker" data-step="2" aria-hidden="true"></div>
+        </div>
+        <div class="timeline-step">
           <h4>Define</h4>
-          <p class="pt-belief">Solve the right problem, not just ship pixels.</p>
           <ul>
             <li>Personas & JTBD</li>
             <li>Journey maps & problem framing</li>
             <li>Clear success metrics</li>
           </ul>
-        </article>
-
-        <!-- Design -->
-        <article class="pt-step">
-          <div class="pt-marker" data-step="3" aria-hidden="true"></div>
+        </div>
+        <div class="timeline-step">
           <h4>Design</h4>
-          <p class="pt-belief">Iterate fast, test early, keep it accessible.</p>
           <ul>
             <li>Wireframes → hi-fi prototypes</li>
             <li>Design systems & components</li>
             <li>Accessibility first</li>
           </ul>
-        </article>
-
-        <!-- Test -->
-        <article class="pt-step">
-          <div class="pt-marker" data-step="4" aria-hidden="true"></div>
+        </div>
+        <div class="timeline-step">
           <h4>Test</h4>
-          <p class="pt-belief">Evidence over opinion—let users guide us.</p>
           <ul>
             <li>Usability studies</li>
             <li>A/B experiments</li>
             <li>Iterative refinements</li>
           </ul>
-        </article>
-
-        <!-- Deliver -->
-        <article class="pt-step">
-          <div class="pt-marker" data-step="5" aria-hidden="true"></div>
+        </div>
+        <div class="timeline-step">
           <h4>Deliver</h4>
-          <p class="pt-belief">Launch → learn → improve continuously.</p>
           <ul>
             <li>Handoffs with specs</li>
             <li>Post-launch feedback loops</li>
             <li>Roadmap next steps</li>
           </ul>
-        </article>
+        </div>
       </div>
-    </div>
 
-    <!-- LANE: Development -->
-    <div class="pt-lane" data-lane="dev" aria-label="Development Process">
-      <div class="pt-lane-head">
-        <span class="pt-dot" aria-hidden="true"></span>
+      <!-- Development Lane -->
+      <div class="timeline-lane">
         <h3>Development</h3>
-      </div>
-
-      <div class="pt-rail" aria-hidden="true"></div>
-
-      <div class="pt-steps">
-        <!-- Plan -->
-        <article class="pt-step">
-          <div class="pt-marker" data-step="1" aria-hidden="true"></div>
+        <div class="timeline-step">
           <h4>Plan</h4>
-          <p class="pt-belief">Build the smallest thing that proves value.</p>
           <ul>
             <li>Breakdown epics → stories</li>
             <li>Define acceptance criteria</li>
             <li>Pick tech & architecture</li>
           </ul>
-        </article>
-
-        <!-- Setup -->
-        <article class="pt-step">
-          <div class="pt-marker" data-step="2" aria-hidden="true"></div>
+        </div>
+        <div class="timeline-step">
           <h4>Setup</h4>
-          <p class="pt-belief">Strong foundations make shipping faster.</p>
           <ul>
             <li>Design tokens & theming</li>
             <li>Component library</li>
             <li>CI/CD & quality gates</li>
           </ul>
-        </article>
-
-        <!-- Build -->
-        <article class="pt-step">
-          <div class="pt-marker" data-step="3" aria-hidden="true"></div>
+        </div>
+        <div class="timeline-step">
           <h4>Build</h4>
-          <p class="pt-belief">Code mirrors design: clean, modular, tested.</p>
           <ul>
             <li>Responsive, accessible UI</li>
             <li>API integration</li>
             <li>Unit & E2E tests</li>
           </ul>
-        </article>
-
-        <!-- Validate -->
-        <article class="pt-step">
-          <div class="pt-marker" data-step="4" aria-hidden="true"></div>
+        </div>
+        <div class="timeline-step">
           <h4>Validate</h4>
-          <p class="pt-belief">Measure what matters, then optimize.</p>
           <ul>
             <li>Perf & security checks</li>
             <li>Telemetry & analytics</li>
             <li>Bug triage</li>
           </ul>
-        </article>
-
-        <!-- Ship -->
-        <article class="pt-step">
-          <div class="pt-marker" data-step="5" aria-hidden="true"></div>
+        </div>
+        <div class="timeline-step">
           <h4>Ship</h4>
-          <p class="pt-belief">Reliable releases + feedback cycles.</p>
           <ul>
             <li>Rollouts & feature flags</li>
             <li>Docs & handover</li>
             <li>Continuous improvement</li>
           </ul>
-        </article>
+        </div>
       </div>
     </div>
   </div>

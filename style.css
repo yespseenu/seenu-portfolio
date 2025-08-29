@@ -156,14 +156,26 @@ section.show {
 }
 
 /* 🌟 Hero Section */
+/* Hero grid */
 .hero {
   display: grid;
   gap: 24px;
   align-items: center;
   grid-template-columns: 1.15fr 0.85fr;
+  padding: 2rem 1rem;
 }
 
+/* Hero image */
+#heroimage {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+}
 
+/* Headings & paragraph */
 .hero h1 {
   font-size: clamp(28px, 3.2vw + 8px, 48px);
   line-height: 1.15;
@@ -173,8 +185,10 @@ section.show {
 .hero p {
   color: var(--muted);
   margin: 0 0 18px;
+  font-size: clamp(14px, 1.5vw, 18px);
 }
 
+/* Call to action buttons */
 .cta {
   display: flex;
   gap: 12px;
@@ -188,22 +202,66 @@ section.show {
   padding: 12px 16px;
   border-radius: 14px;
   border: 1px solid #ffffff12;
-  transition: transform .15s ease, box-shadow .15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .btn.primary {
-  background: var(--brand);
+  background: var(--brand, #4f46e5);
   color: white;
   border-color: transparent;
 }
 
 .btn.secondary {
   background: transparent;
+  color: var(--brand, #4f46e5);
 }
 
 .btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 24px #00000020;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero div:first-child {
+    order: 2; /* Text below image on small screens */
+  }
+
+  .hero div:last-child {
+    order: 1;
+    margin-bottom: 1.5rem;
+  }
+
+  #heroimage {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .cta {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero h1 {
+    font-size: clamp(22px, 6vw, 32px);
+  }
+
+  .hero p {
+    font-size: clamp(12px, 3vw, 16px);
+  }
+
+  .btn {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
 }
 
 /* 🎖️ Badge */
@@ -216,18 +274,17 @@ section.show {
   background: color-mix(in oklab, var(--brand) 12%, transparent);
   border: 1px dashed color-mix(in oklab, var(--brand) 35%, transparent);
 }
-
-/* 👤 About Section */
+/* 👤 About Section - Responsive Update */
 .about-grid {
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr 1fr;
   padding: 20px;
   border-radius: 20px;
-  background-color:rgb(255, 255, 255,0.9)
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
-
+/* KPI Cards */
 .kpis {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -259,170 +316,161 @@ section.show {
   font-size: 13px;
 }
 
+/* Skill Tags */
 .tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr; /* stack columns vertically */
+    padding: 15px;
+  }
+
+  .kpis {
+    grid-template-columns: repeat(2, 1fr); /* two KPIs per row */
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .kpis {
+    grid-template-columns: 1fr; /* one KPI per row on small screens */
+    gap: 8px;
+  }
+
+  .tags {
+    justify-content: center; /* center skill tags */
+  }
+
+  .kpi h3 {
+    font-size: 22px;
+  }
+
+  .kpi p {
+    font-size: 12px;
+  }
+
+  .about-grid div > p {
+    font-size: 14px; /* smaller text for mobile */
+  }
+}
+
 .process-timeline {
-  background: var(--pt-bg);
-  color: var(--pt-text);
-  padding: clamp(2.5rem, 4vw, 4rem) 1rem;
+  background: var(--pt-bg, #f4f6fb);
+  color: var(--pt-text, #1f2937);
+  padding: 2rem 1rem;
+  font-family: 'Inter', sans-serif;
 }
 
 .pt-container {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
-  
 }
 
 .pt-header {
+  background-color: white;
   text-align: center;
-  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
-  background-color:white ;
+  margin-bottom: 2rem;
 }
 
 .pt-header h2 {
-  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
-  margin: 0 0 .5rem;
-  letter-spacing: -0.02em;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
 .pt-header p {
-  margin: 0;
-  color: var(--pt-muted);
+  color: var(--pt-muted, #6b7280);
+  font-size: 1rem;
 }
 
-/* LANE (row) */
-.pt-lane {
-  position: relative;
-  margin-top: 2rem;
-}
-
-.pt-lane-head {
-  display: inline-flex;
-  align-items: center;
-  gap: .5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.pt-lane[data-lane="ux"] .pt-lane-head { color: var(--pt-ux); }
-.pt-lane[data-lane="dev"] .pt-lane-head { color: var(--pt-dev); }
-
-.pt-dot {
-  width: .75rem;
-  height: .75rem;
-  border-radius: 999px;
-  display: inline-block;
-  box-shadow: 0 0 0 4px rgba(99,102,241,0.12);
-}
-
-.pt-lane[data-lane="ux"] .pt-dot { background: var(--pt-ux); }
-.pt-lane[data-lane="dev"] .pt-dot { background: var(--pt-dev); }
-
-/* RAIL (the connecting line behind steps) */
-.pt-rail {
-  position: relative;
-  height: 2px;
-  background: var(--pt-rail);
-  margin-bottom: 1.25rem;
-  border-radius: 1px;
-}
-
-/* STEPS: desktop = grid; mobile = scroll-snap row */
-.pt-steps {
+/* Timeline grid */
+.timeline-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(200px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
-@media (max-width: 900px) {
-  .pt-steps {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 85%;
-    overflow-x: auto;
-    gap: 1rem;
-    padding-bottom: .5rem;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-  }
-  .pt-steps::-webkit-scrollbar { height: 8px; }
-  .pt-steps::-webkit-scrollbar-thumb {
-    background: var(--pt-border);
-    border-radius: 999px;
-  }
+/* Lane */
+.timeline-lane h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--primary, #4f46e5);
+  position: relative;
 }
 
-/* STEP card */
-.pt-step {
+.timeline-lane h3::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 4px;
+  background: linear-gradient(90deg, #4f46e5, #22c55e);
+  border-radius: 2px;
+}
+
+/* Steps */
+.timeline-step {
   position: relative;
   background: #fff;
-  border: 1px solid var(--pt-border);
-  border-radius: 18px;
-  padding: 1rem 1rem 1.1rem;
-  box-shadow: var(--pt-shadow);
-  scroll-snap-align: start;
-  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
 }
 
-.pt-step:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 36px rgba(2, 6, 23, 0.12);
-  border-color: #dbe3ea;
+/* Hover effect */
+.timeline-step:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.15);
+  border-color: #4f46e5;
 }
 
-/* Step number marker */
-.pt-marker {
-  position: absolute;
-  top: -14px;
-  left: 14px;
-  width: 28px;
-  height: 28px;
-  border-radius: 999px;
-  display: grid;
-  place-items: center;
-  font: 700 12px/1 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
-  color: #fff;
-  box-shadow: 0 6px 14px rgba(2,6,23,.18);
+
+
+/* Step titles */
+.timeline-step h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
-.pt-lane[data-lane="ux"] .pt-marker { background: var(--pt-ux); }
-.pt-lane[data-lane="dev"] .pt-marker { background: var(--pt-dev); }
-
-.pt-marker::after {
-  content: attr(data-step);
+/* Step content */
+.timeline-step ul {
+  padding-left: 1rem;
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
 }
 
-.pt-step h4 {
-  margin: .25rem 0 .25rem;
-  font-size: 1.05rem;
-  letter-spacing: -0.01em;
+.timeline-step li {
+  margin-bottom: 0.3rem;
+  position: relative;
 }
 
-.pt-belief {
-  margin: 0 0 .5rem;
-  font-size: .92rem;
-  color: var(--pt-muted);
-}
 
-.pt-step ul {
-  margin: .25rem 0 0 1rem;
-  padding: 0;
-  font-size: .92rem;
-  color: #1f2937; /* gray-800 */
-}
 
-.pt-step li { margin: .2rem 0; }
-
-/* Optional: subtle gradient edge mask for scroll area on mobile */
-@media (max-width: 900px) {
-  .pt-steps {
-    mask-image: linear-gradient(to right, transparent 0, black 20px, black calc(100% - 20px), transparent 100%);
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline-grid {
+    grid-template-columns: 1fr;
+  }
+  .timeline-step::before {
+    left: -10px;
+  }
+  .timeline-step li::before {
+    left: -0.6rem;
   }
 }
+
 
 
 .projects-grid {
@@ -734,7 +782,7 @@ section.show {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
 }
 
 .contact-btn:hover {
