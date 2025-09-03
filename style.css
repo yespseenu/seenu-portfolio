@@ -710,7 +710,7 @@ section.show {
 .scroll-container {
   display: flex;
   gap: 20px;
-  animation: scroll-left 20s linear infinite;
+  animation: scroll-left 14s linear infinite;
 }
 
 @keyframes scroll-left {
